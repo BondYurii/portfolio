@@ -15,24 +15,24 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
+      
+      degree: "Bachelor's degree, Software",
+      school: "Zhytomyr State Technological University",
       mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      year: "2015-2018",
+      achievements: ["GPA: 4.89", "Subject: Computer Science"],
+      skills: ["Mathematics", "Physics", "Computer Science", "English"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Gained a strong foundation in software development and computer science principles. Engaged in hands-on projects and collaborated on team-based assignments, enhancing problem-solving skills and technical proficiency",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
+      degree: "Master's degree, Software",
+      school: "Taras Shevchenko National University of Kyiv",
       mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+      year: "2022-2024",
+      achievements: ["GPA: 4.96", "Subject: Computer Science"],
+      skills: ["Mathematics", "Physics", "Theoretical Statistics"],
+      description:"Advanced my knowledge in software engineering and computer science, focusing on theoretical and practical aspects of the field. Conducted research in emerging technologies, contributed to academic papers, and collaborated with peers on complex projects to enhance analytical and critical thinking skills."
     },
   ];
 

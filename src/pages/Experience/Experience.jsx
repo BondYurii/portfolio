@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2, Activity, Cpu, Layers, Network, Binary, Code } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -54,6 +54,13 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
+      icon: Code,
+      title: "React Developer",
+      company: "Pure",
+      period: "2018 - 2019",
+      description: "Built and customized React websites for clients around the world.",
+    },
+    {
       icon: Network,
       title: "WordPress Developer",
       company: "Fiverr",
@@ -63,7 +70,7 @@ const ExperienceSection = () => {
     },
     {
       icon: Layers,
-      title: "Junior Frontend Developer",
+      title: "Senior Frontend Developer",
       company: "Sera Programmer",
       period: "2021 - 2023",
       description:

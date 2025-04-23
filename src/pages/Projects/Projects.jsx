@@ -11,7 +11,7 @@ const projects = [
     src: "rock.jpg",
     link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
     color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
+    githubLink: "https://github.com/BondYurii/olova",
     liveLink: "https://olova.js.org/",
   },
   {
@@ -19,9 +19,9 @@ const projects = [
     description:
       "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
     src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
+    link: "https://i.postimg.cc/mrZhwjFC/Screenshot-4.png",
     color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
+    githubLink: "https://github.com/BondYurii/portfolio",
     liveLink: "https://codervai.vercel.app",
   },
   {

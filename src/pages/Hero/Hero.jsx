@@ -50,7 +50,7 @@ export default function Hero() {
 
   const [code] = useState(`
 const profile = {
-    name: 'Nazmul Hossain',
+    name: 'Yurii Bond',
     title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
     skills: [
         'React', 'NextJS', 'Redux', 'Express',
@@ -138,7 +138,7 @@ const profile = {
                     I'm
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      Yurii Bond
                     </span>
                   </span>
                 </h1>
