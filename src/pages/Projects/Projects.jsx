@@ -22,7 +22,7 @@ const projects = [
     link: "https://i.postimg.cc/mrZhwjFC/Screenshot-4.png",
     color: "#8f89ff",
     githubLink: "https://github.com/BondYurii/portfolio",
-    liveLink: "https://codervai.vercel.app",
+    liveLink: "https://bondyurii.vercel.app",
   },
   {
     title: "🚀 CodeWhisperer",
