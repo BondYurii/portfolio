@@ -122,7 +122,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Ukraine, </p>
+                    <p className="text-gray-400"> Ukraine, 23000, region Vinnytska,<br/> district Barskyi, village Shershni </p>
                   </div>
                 </div>
               </div>

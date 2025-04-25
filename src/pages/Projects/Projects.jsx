@@ -31,7 +31,7 @@ const projects = [
     src: "water.jpg",
     link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
     color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
+    githubLink: "https://github.com/BondYurii/codewhisperer",
     liveLink: "https://codewhisperer.vercel.app/",
   },
   {
@@ -41,9 +41,29 @@ const projects = [
     src: "house.jpg",
     link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
     color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
+    githubLink: "https://github.com/BondYurii/CodeKori",
     liveLink: "https://codekori.js.org",
+  }, 
+  {
+    title: "Consulting Finance",
+    description:
+      "I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements. 💻✨",
+    src: "finace.png",
+    link: "https://i.postimg.cc/qqYkdfQH/finace.png",
+    color: "#ed649e",
+    githubLink: "https://github.com/BondYurii/crenotive",
+    liveLink: "https://crenotive.netlify.app",
   },
+  {
+    title: "Next Ventures",
+    description:
+      "Developed a platform for virtual pitch competitions using Next.js 15, enabling smooth idea sharing and exploration with optimal performance.",
+    src: "venture.png",
+    link: "https://i.postimg.cc/g0kkRKx5/venture.png",
+    color: "#ed649e",
+    githubLink: "https://github.com/AayushBharti/Next-Venture.git",
+    liveLink: "https://ab-next-venture.vercel.app",
+  }, 
 ];
 
 export default function Projects() {
@@ -58,7 +78,10 @@ export default function Projects() {
       <main className="bg-black" ref={container}>
         <section className="text-white w-full bg-slate-950">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
+            const targetScale = 1 - (projects.length - i - 1) * 0.05;
+            const startRange = i * 0.2;
+            const endRange = Math.min((i + 1) * 0.2, 1);
+            
             return (
               <Card
                 key={`p_${i}`}
@@ -68,7 +91,7 @@ export default function Projects() {
                 color={project.color}
                 description={project.description}
                 progress={scrollYProgress}
-                range={[i * 0.25, 1]}
+                range={[startRange, endRange]}
                 targetScale={targetScale}
                 githubLink={project.githubLink}
                 liveLink={project.liveLink}
@@ -95,6 +118,7 @@ function Card({
 }) {
   const container = useRef(null);
   const scale = useTransform(progress, range, [1, targetScale]);
+  // const y = useTransform(progress, range, [0, -8]);
 
   return (
     <div
@@ -104,12 +128,16 @@ function Card({
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          y: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="relative -top-[25%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top"
+        className="relative h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-center"
         whileHover={{
           y: -8,
-          transition: { duration: 0.3 },
+          transition: { 
+            type: "spring",
+            stiffness: 300,
+            damping: 20
+          },
         }}
       >
         {/* Modern split card design */}
@@ -121,8 +149,10 @@ function Card({
               alt={title}
               className="w-full h-full object-cover"
               initial={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.4 }}
+              whileHover={{ 
+                scale: 1.05,
+                transition: { duration: 0.4, ease: "easeOut" }
+              }}
             />
 
             {/* Colored overlay on hover */}
@@ -130,8 +160,10 @@ function Card({
               className="absolute inset-0"
               style={{ backgroundColor: color, mixBlendMode: "overlay" }}
               initial={{ opacity: 0 }}
-              whileHover={{ opacity: 0.3 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ 
+                opacity: 0.3,
+                transition: { duration: 0.3, ease: "easeInOut" }
+              }}
             />
 
             {/* Project number */}
@@ -169,8 +201,14 @@ function Card({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
+                  whileHover={{ 
+                    y: -3,
+                    transition: { 
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10
+                    }
+                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -199,8 +237,14 @@ function Card({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
+                  whileHover={{ 
+                    y: -3,
+                    transition: { 
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10
+                    }
+                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
